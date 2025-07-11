@@ -1,6 +1,6 @@
 <html>
-<head>
-    <!-- Google tag (gtag.js) -->
+    <head>
+        <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-HXRXMBMM6F"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -16,105 +16,94 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-NH54NL29');</script>
 <!-- End Google Tag Manager -->
- <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.topnav {
-  overflow: hidden;
-  background-color: #333;
-}
-
-.topnav a {
-  float: left;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
-
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-.topnav a.active {
-  background-color: #04AA6D;
-  color: white;
-}
-
-#consult-banner {
-  background-color: #f1f1f1;
-  text-align: center;
-  padding: 3em 1em;
-  margin-top: 3em;
-  border-top: 2px solid #ccc;
+ .product-row {
+  display: flex;
+  gap: 1em;
+  flex-wrap: wrap;
+  justify-content: center;
 }
  
-.consult-banner h2 {
-  font-size: 2em;
-  margin-bottom: 0.5em;
+.product {
+  border: 1px solid #ccc;
+  padding: 1em;
+  margin: 1em 0;
+  max-width: 300px;
+  flex: 1 1 250px;
+  text-align: center;
 }
  
-.consult-banner p {
-  font-size: 1.1em;
-  margin-bottom: 1em;
+.product img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+ 
+.product h3 {
+  margin-top: 0.5em;
+}
+ 
+.product p {
+  font-weight: bold;
+  margin: 0.5em 0;
 }
 </style>
-<title>Demo site</title>
-</head>
-<body>
-    <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NH54NL29"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
- <div class="topnav">
-  <a class="active" href="demo.html" >Home</a>
-  <a href="news.html" target="_blank">Products</a>
-  <a href="contact.html" target="_blank">Contact</a>
-  <a href="about.html" target="_blank">About</a>
-</div>
 
-<div style="padding-left:16px">
-  <h2>Website starts here</h2>
-  <p>Some content..</p>
-</div>
-<p><b> My demo site</b></p>
-        <h1>Heading</h1>
-        <h2>Heading 2</h2>
-        <h3>Heading 3</h3>
-        <h1>Heading</h1>
-        <h2>Heading 2</h2>
-        <h3>Heading 3</h3>
-        <h1>Heading</h1>
-        <h2>Heading 2</h2>
-        <h3>Heading 3</h3>
-        <h1>Heading</h1>
-        <h2>Heading 2</h2>
-        <h3>Heading 3</h3>
-        <h1>Heading</h1>
-        <h2>Heading 2</h2>
-        <h3>Heading 3</h3>
-        <h1>Heading</h1>
-        <h2>Heading 2</h2>
-        <h3>Heading 3</h3>
-        <h1>Heading</h1>
-        <h2>Heading 2</h2>
-        <h3>Heading 3</h3>
-        <h1>Heading</h1>
-        <h2>Heading 2</h2>
-        <h3>Heading 3</h3>
-        <h1>Heading</h1>
-        <h2>Heading 2</h2>
-        <h3>Heading 3</h3>
-<div class="consult-banner" id="consult-banner">
-  <h2>For more information</h2>
-  <p>Discuss your project or idea with our experts.</p>
-  <a href="contact.html" class="btn">Book a Free Consultation</a>
-</div>
-</body>
+        <title>Products page</title>
+    </head>
+    <body>
+            <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NH54NL29"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <section id="products">
+  <h2>Featured Products</h2>
+  <div class="product-row">
+    <div class="product">
+      <img src="1.jpg" alt="White t-shirt">
+      <h3>White t-shirt</h3>
+      <p>$9.99</p>
+      <button class="btn" onclick="addToCart('White t-shirt', 'WH001', 59.99)">Add to Cart</button>
+    </div>
+ 
+    <div class="product">
+      <img src="2.jpg" alt="Pink oversized t-shirt">
+      <h3>Pink oversized t-shirt</h3>
+      <p>$8.99</p>
+      <button class="btn" onclick="addToCart('Pink oversized t-shirt', 'SW001', 89.99)">Add to Cart</button>
+    </div>
+ 
+    <div class="product">
+      <img src="3.jpg" alt="Black oversized t-shirt">
+      <h3>Black oversized t-shirt</h3>
+      <p>$11.99</p>
+      <button class="btn" onclick="addToCart('Black oversized t-shirt', 'BS001', 29.99)">Add to Cart</button>
+    </div>
+  </div>
+</section>
+<script>
+function addToCart(productName, productId, price) {
+//   quantity = parseInt(quantity) || 1;
+  const payload = {
+    event: 'add_to_cart',
+    ecommerce: {
+      currency: 'USD',
+      items: [{
+        item_name: productName,
+        item_id: productId,
+        price: price,
+        // quantity: quantity,
+        item_category: 'Featured'
+      }]
+    }
+  };
+  console.log('Pushing to dataLayer:', payload);
+  window.dataLayer = window.dataLayer || [];
+  dataLayer.push(payload);
+  alert(`${productName} added to cart!`);
+}
+ 
+</script>
+ 
+    </body>
 </html>

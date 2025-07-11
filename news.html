@@ -1,0 +1,125 @@
+<html>
+    <head>
+        <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HXRXMBMM6F"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-HXRXMBMM6F');
+</script>
+    <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NH54NL29');</script>
+<!-- End Google Tag Manager -->
+<style>
+ .product-row {
+  display: flex;
+  gap: 1em;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+ 
+.product {
+  border: 1px solid #ccc;
+  padding: 1em;
+  margin: 1em 0;
+  max-width: 300px;
+  flex: 1 1 250px;
+  text-align: center;
+}
+ 
+.product img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+ 
+.product h3 {
+  margin-top: 0.5em;
+}
+ 
+.product p {
+  font-weight: bold;
+  margin: 0.5em 0;
+}
+</style>
+
+        <title>Products page</title>
+    </head>
+    <body>
+            <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NH54NL29"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <section id="products">
+  <h2>Featured Products</h2>
+  <div class="product-row">
+    <div class="product">
+      <img src="1.jpg" alt="White t-shirt">
+      <h3>White t-shirt</h3>
+      <p>$9.99</p>
+      <button class="btn" onclick="addToCart('White t-shirt', 'WH001', 59.99)">Add to Cart</button>
+    </div>
+ 
+    <div class="product">
+      <img src="2.jpg" alt="Pink oversized t-shirt">
+      <h3>Pink oversized t-shirt</h3>
+      <p>$8.99</p>
+      <button class="btn" onclick="addToCart('Pink oversized t-shirt', 'SW001', 89.99)">Add to Cart</button>
+    </div>
+ 
+    <div class="product">
+      <img src="3.jpg" alt="Black oversized t-shirt">
+      <h3>Black oversized t-shirt</h3>
+      <p>$11.99</p>
+      <button class="btn" onclick="addToCart('Black oversized t-shirt', 'BS001', 29.99)">Add to Cart</button>
+    </div>
+  </div>
+</section>
+<script>
+function addToCart(productName, productId, price) {
+  window.dataLayer = window.dataLayer || [];
+  dataLayer.push({
+    event: 'add_to_cart',
+    ecommerce: {
+      items: [
+        {
+          item_name: productName,
+          item_id: productId,
+          price: price,
+          quantity: 1
+        }
+      ]
+    }
+  });
+  alert(productName + " added to cart!");
+}
+function addToCart(productName, productId, price, quantity) {
+  quantity = parseInt(quantity) || 1;
+  window.dataLayer = window.dataLayer || [];
+  dataLayer.push({
+    event: 'add_to_cart',
+    ecommerce: {
+        currency: 'USD',
+      items: [
+        {
+          item_name: productName,
+          item_id: productId,
+          price: price,
+          quantity: quantity,
+            item_category: 'Featured'
+        }
+      ]
+    }
+  });
+  alert(quantity + " × " + productName + " added to cart!");
+}
+</script>
+ 
+    </body>
+</html>
